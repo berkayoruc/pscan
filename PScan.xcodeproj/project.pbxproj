@@ -11,6 +11,9 @@
 		F068185428C0039F00155C36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F068185328C0039F00155C36 /* ContentView.swift */; };
 		F068185628C003A000155C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F068185528C003A000155C36 /* Assets.xcassets */; };
 		F068185928C003A000155C36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F068185828C003A000155C36 /* Preview Assets.xcassets */; };
+		F068186128C005FB00155C36 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F068186028C005FB00155C36 /* ScanData.swift */; };
+		F068186328C0071C00155C36 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F068186228C0071C00155C36 /* ScannerView.swift */; };
+		F068186528C008E000155C36 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F068186428C008E000155C36 /* TextRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		F068185328C0039F00155C36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F068185528C003A000155C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F068185828C003A000155C36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F068185F28C003B300155C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F068186028C005FB00155C36 /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		F068186228C0071C00155C36 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		F068186428C008E000155C36 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		F068185028C0039F00155C36 /* PScan */ = {
 			isa = PBXGroup;
 			children = (
+				F068185F28C003B300155C36 /* Info.plist */,
 				F068185128C0039F00155C36 /* PScanApp.swift */,
 				F068185328C0039F00155C36 /* ContentView.swift */,
+				F068186028C005FB00155C36 /* ScanData.swift */,
+				F068186228C0071C00155C36 /* ScannerView.swift */,
+				F068186428C008E000155C36 /* TextRecognizer.swift */,
 				F068185528C003A000155C36 /* Assets.xcassets */,
 				F068185728C003A000155C36 /* Preview Content */,
 			);
@@ -138,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F068185428C0039F00155C36 /* ContentView.swift in Sources */,
+				F068186328C0071C00155C36 /* ScannerView.swift in Sources */,
+				F068186528C008E000155C36 /* TextRecognizer.swift in Sources */,
 				F068185228C0039F00155C36 /* PScanApp.swift in Sources */,
+				F068186128C005FB00155C36 /* ScanData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -272,16 +286,19 @@
 				DEVELOPMENT_TEAM = 5Q2DS6F54X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PScan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} requires permission to scan files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexaapps.PScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -301,16 +318,19 @@
 				DEVELOPMENT_TEAM = 5Q2DS6F54X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PScan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} requires permission to scan files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexaapps.PScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
